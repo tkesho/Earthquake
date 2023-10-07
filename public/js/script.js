@@ -1,6 +1,8 @@
 document.getElementById('submitBtn').addEventListener('click', function() {
-	const anchor = document.getElementById('anch');
-	anchor.scrollIntoView({ behavior: 'smooth' });
+	if (event.target !== this) {
+        return; // Not the parent element, so exit
+    }
+	document.getElementById('anch').scrollIntoView({ behavior: 'smooth' });
 });
 
 const newScript = document.createElement('script');
@@ -10,7 +12,7 @@ newScript.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjm3YW-5Tu8md
 
 // If there's a callback function you want to execute when the script loads:
 newScript.onload = function() {
-    // Your callback logic here
+	// Your callback logic here
 };
 
 document.body.appendChild(newScript);
@@ -139,5 +141,13 @@ function initializeMap() {
 	});
 
 	// Automatically trigger the click event of the submit button when the website is launched
-	document.getElementById("submitBtn").click();
+	//document.getElementById("submitBtn").click();
 }
+
+document.getElementById('liveearth').addEventListener('click', function(event) {
+	// Prevent default behavior of the link
+	event.preventDefault();
+
+	// Hide the div
+	document.getElementById('earthquakeForm').style.display = 'none';
+});
