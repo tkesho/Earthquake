@@ -1,0 +1,221 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+* {
+	font-family: 'Roboto Mono', sans-serif;
+	
+}
+
+body {
+	background-color:  #F5F5DC;
+}
+
+nav {
+	display: block;
+	padding: 0px 100px;
+	background-color: #d6732d;
+	
+	height: 10vh;
+}
+
+nav ul {
+	display: flex;
+	/* width: 500px; */
+	flex-direction: row;
+	height: 100%;
+	justify-content: center;
+}
+
+.links{
+	margin: 0px 2px;
+	color: #000;
+	font-size: 20px;
+}
+
+.links a:hover {
+	background-color: #8B4513;
+}
+
+.links a {
+	display: block;
+	font-weight: 600;
+	color: #F5F5DC;
+	height: 100%;
+	width: 300px;
+	padding: 19px 50px 15px;
+	text-align: center;
+	text-decoration: none;
+	transition: .5s;
+}
+
+#map {
+	margin: 0px auto;
+	width: 1000px;
+	height: 500px;
+	background-color: gray;
+	padding-top: 100px;
+}
+
+#earthquakeForm {
+	margin-top: 50px;
+}
+
+form {
+	font-size: 18px;
+}
+
+form input, form button{
+	display: block;
+	margin: 0px auto;
+}
+
+.for label {
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.for {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.for input {
+	display: block;
+	margin-top: 10px;
+	width: 350px;
+	height: 40px;
+	font-size: 21px;
+	border: 2px solid #532d12;
+	text-align: center;
+}
+
+form button {
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-radius: 7px;
+	background-color: #d6732d;
+	box-shadow: 0px 6px #291709;
+	transition: 0.2s
+}
+
+form button:active {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	box-shadow: 0px 0px #291709;
+}
+
+#map {
+	margin-top: 70px;
+}
+
+.zd {
+	height: 57px;
+	margin-top: 50px;
+	border: 1px solid #F5F5DC;
+}
+
+footer {
+	display: block;
+	height: 70px;
+	margin-top: 100px;
+	background-color: #d6732d;
+	position: relative;
+}
+
+.end {
+	display: block;
+	text-align: right;
+	font-size: 18px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
