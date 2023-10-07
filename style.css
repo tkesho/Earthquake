@@ -50,6 +50,7 @@ nav ul {
 	width: 1000px;
 	height: 500px;
 	background-color: gray;
+	padding-top: 100px;
 }
 
 #earthquakeForm {
