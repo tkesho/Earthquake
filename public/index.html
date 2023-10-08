@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Earthquake data</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/nullstyle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class = "links">
+				<a href="" id = "liveearth">Live Earthquakes</a>
+			</li>
+			<li class="links">
+				<a href="" id="dateearth">Earthquakes by date</a>
+			</li>
+			<li class = "links">
+				<a href="" id="zoneearth">Zones of risk</a>
+			</li>
+			<li class = "links">
+				<a href="" id="aboutearth">About</a>
+			</li>
+		</ul>
+	</nav>
+	<form id="earthquakeForm">
+		<!-- HTML form elements for user input -->
+		<div class="for"><label for="starttime">Start Time:</label>
+		<input type="date" id="starttime" placeholder="YYYY-MM-DD"></div>
+		<div class="for"><label for="endtime">End Time:</label>
+		<input type="date" id="endtime" placeholder="YYYY-MM-DD"></div>
+		<div class="for"><label for="minmagnitude" >Min Magnitude:</label>
+		<input type="number" id="minmagnitude" value="4"></div>
+		<div class ="zd"><button type="button" id="submitBtn">submit</button></div>
+	</form>
+	
+	<div id="anch"></div>
+	<div id="map"></div> <!-- Set the map container height here -->
+     <div class="cont" id="cont1">
+          <h1>About</h1>
+          <p>Tbilisi Tectonics is a team of space geologists and web developers who have created a live earthquake map and seismic zone map to help people stay informed about earthquake risk. Our goal is to provide easy-to-access and up-to-date information about earthquakes so that people can make informed decisions about their safety.</p>
+          <h3>Frequently Asked Questions</h3>
+          <div class="zd1">
+               <button class="questionBtn" id="zd1" onclick="expandWindow1('Earthquakes are a natural hazard that can cause significant damage and loss of life. By understanding where earthquakes are most likely to occur and how strong they are likely to be, people can take steps to protect themselves and their property.','Why is this important?')">Why is this important?</button>
+          </div>
+          <div class="zd2">
+               <button class="questionBtn" id="zd2" onclick="expandWindow2('Our live earthquake map displays the latest earthquake data from the United States Geological Survey (USGS). The map shows the location, magnitude, and depth of each earthquake. Our seismic zone map shows areas that are at risk for earthquakes. The map is based on a variety of factors, including historical earthquake data, fault lines, and tectonic plate boundaries.','How does our website work?')">How does our website work?</button>
+          </div>
+          <div class="zd3">
+               <button class="questionBtn" id="zd3" onclick="expandWindow3('You can use our website to stay informed about earthquake risk in your area. You can also use it to learn more about earthquakes and how to prepare for one.','How can you use our website?')">How can you use our website?</button>
+          </div>
+     </div>
+	<footer>
+		<span class = "end">Created through NASA space apps hackathon by Tbilisi Tectonics in 2023</span>
+	</footer>
+	
+	<script src = "js/script.js"></script>
+</body>
+</html>
