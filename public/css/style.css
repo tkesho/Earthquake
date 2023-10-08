@@ -27,6 +27,7 @@ nav ul {
 	margin: 0px 2px;
 	color: #000;
 	font-size: 20px;
+	line-height: 22px;
 }
 
 .links a:hover {
@@ -34,12 +35,17 @@ nav ul {
 }
 
 .links a {
-	display: block;
+	display: flex;
+	/* This turns the anchor into a flex container */
+	align-items: center;
+	/* This centers the content vertically */
+	justify-content: center;
+	/* This centers the content horizontally */
 	font-weight: 600;
 	color: #F5F5DC;
 	height: 100%;
 	width: 300px;
-	padding: 19px 50px 15px;
+	padding: 0px 10px;
 	text-align: center;
 	text-decoration: none;
 	transition: .5s;
@@ -49,7 +55,7 @@ nav ul {
 	margin: 0px auto;
 	width: 1000px;
 	height: 500px;
-	background-color: gray;
+	background-color: #8B4513;
 	padding-top: 100px;
 }
 
@@ -133,4 +139,8 @@ footer {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
+}
+
+form {
+	display: none;
 }

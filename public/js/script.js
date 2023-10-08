@@ -27,6 +27,23 @@ function initializeMap() {
 		streetViewControl: false,
 	});
 
+	
+	let infoWindow;
+	map.addListener('click', function(event) {
+		let clickedLocation = event.latLng;
+
+		if (infoWindow) {
+			infoWindow.close();
+		}
+
+		infoWindow = new google.maps.InfoWindow({
+			content: 'You clicked at: ' + clickedLocation.lat() + ', ' + clickedLocation.lng(),
+			position: clickedLocation
+		});
+
+		infoWindow.open(map);
+	});
+
 	const api_url = "https://earthquake.usgs.gov/fdsnws/event/1/query";
 	const earthquakeLayers = []; // Array to store earthquake data layers
 
@@ -145,9 +162,38 @@ function initializeMap() {
 }
 
 document.getElementById('liveearth').addEventListener('click', function(event) {
-	// Prevent default behavior of the link
 	event.preventDefault();
-
-	// Hide the div
 	document.getElementById('earthquakeForm').style.display = 'none';
+	//checking
+	document.getElementById('liveearth').style.backgroundColor = '#8B4513';
+	document.getElementById('dateearth').style.backgroundColor = '#d6732d';
+	document.getElementById('zoneearth').style.backgroundColor = '#d6732d';
+	document.getElementById('aboutearth').style.backgroundColor = '#d6732d';
 });
+
+document.getElementById('zoneearth').addEventListener('click', function(event) {
+	event.preventDefault();
+	document.getElementById('earthquakeForm').style.display = 'none';
+	document.getElementById('liveearth').style.backgroundColor = '#d6732d';
+	document.getElementById('dateearth').style.backgroundColor = '#d6732d';
+	document.getElementById('zoneearth').style.backgroundColor = '#8B4513';
+	document.getElementById('aboutearth').style.backgroundColor = '#d6732d';
+});
+
+document.getElementById('aboutearth').addEventListener('click', function(event) {
+	event.preventDefault();
+	document.getElementById('earthquakeForm').style.display = 'none';
+	document.getElementById('liveearth').style.backgroundColor = '#d6732d';
+	document.getElementById('dateearth').style.backgroundColor = '#d6732d';
+	document.getElementById('zoneearth').style.backgroundColor = '#d6732d';
+	document.getElementById('aboutearth').style.backgroundColor = '#8B4513';
+});
+
+document.getElementById('dateearth').addEventListener('click', function(event) {
+	event.preventDefault();
+	document.getElementById('earthquakeForm').style.display = 'block';
+	document.getElementById('liveearth').style.backgroundColor = '#d6732d';
+	document.getElementById('dateearth').style.backgroundColor = '#8B4513';
+	document.getElementById('zoneearth').style.backgroundColor = '#d6732d';
+	document.getElementById('aboutearth').style.backgroundColor = '#d6732d';
+})
